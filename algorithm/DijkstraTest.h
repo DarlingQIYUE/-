@@ -1,14 +1,15 @@
 #pragma once
 #include <vector>
+using namespace std;
 
-#define INF 99999999	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-//ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Â·ï¿½ï¿½
-//matrixï¿½Ú½Ó¾ï¿½ï¿½ï¿½  sÔ´ï¿½ï¿½
+#define INF 99999999	//¶¨ÒåÎÞÇî´ó
+//µ¥Ô´×î¶ÌÂ·¾¶
+//matrixÁÚ½Ó¾ØÕó  sÔ´µã
 vector<int> Dijkstra(vector<vector<int>> matrix,int s) {
-	int n = matrix.size();		//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
-	vector<int> dis(n,INF);		//distanceï¿½ï¿½Â¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½Ê¼Öµï¿½ï¿½ï¿½ï¿½ï¿½
-	vector<int> par(n,-1);		//parentï¿½ï¿½Â¼Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Öµ-1
-	vector<int> vis(n,0);		//visitedï¿½ï¿½Â¼ï¿½Ç·ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ÖµÎªfalse
+	int n = matrix.size();		//½Úµã×ÜÊý
+	vector<int> dis(n,INF);		//distance¼ÇÂ¼×î¶ÌÂ·¾¶³¤¶È£¬³õÊ¼ÖµÎÞÇî´ó£¬
+	vector<int> par(n,-1);		//parent¼ÇÂ¼Â·¾¶£¬³õÊ¼Öµ-1
+	vector<int> vis(n,0);		//visited¼ÇÂ¼ÊÇ·ñ·ÃÎÊ¹ý£¬³õÊ¼ÖµÎªfalse
 
 	dis[s] = 0;
 	int k = s;
